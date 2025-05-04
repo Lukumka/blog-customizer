@@ -3,7 +3,7 @@ export const fontFamilyClasses = [
 	'ubuntu',
 	'cormorant-garamond',
 	'days-one',
-	'merriweather',
+	'merreather',
 ] as const;
 
 export type FontFamiliesClasses = (typeof fontFamilyClasses)[number];
@@ -177,3 +177,13 @@ export const defaultArticleState = {
 };
 
 export type ArticleStateType = typeof defaultArticleState;
+
+export const articleStyleOptions = {
+	fontFamilyOptions,
+	fontSizeOptions,
+	fontColors,
+	backgroundColors,
+	contentWidthArr,
+};
+
+export type TArticleStyleOptions = typeof articleStyleOptions;
