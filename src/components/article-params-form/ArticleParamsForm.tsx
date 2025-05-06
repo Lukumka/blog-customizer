@@ -3,7 +3,7 @@ import { Button } from 'src/ui/button';
 import { Select } from 'src/ui/select';
 
 import cn from 'classnames';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './ArticleParamsForm.module.scss';
 
 import {
@@ -15,6 +15,7 @@ import {
 import { RadioGroup } from 'src/ui/radio-group';
 import { Separator } from 'src/ui/separator';
 import { Text } from 'src/ui/text';
+import { useOutsideClickClose } from 'src/ui/select/hooks/useOutsideClickClose';
 
 type ArticleParamsFormProps = {
 	onChange: (styles: ArticleStateType) => void;
@@ -28,6 +29,13 @@ export const ArticleParamsForm = ({
 	const [pageStyles, setPageStyles] =
 		useState<ArticleStateType>(defaultArticleState);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const formRef = useRef<HTMLElement>(null);
+	useOutsideClickClose({
+		isOpen: isMenuOpen,
+		rootRef: formRef,
+		onChange: setIsMenuOpen,
+		onClose: () => {},
+	});
 
 	const handleArrowButton = () => {
 		setIsMenuOpen((prevState) => !prevState);
@@ -68,6 +76,7 @@ export const ArticleParamsForm = ({
 		<>
 			<ArrowButton isOpen={isMenuOpen} onClick={handleArrowButton} />
 			<aside
+				ref={formRef}
 				className={cn(styles.container, {
 					[styles.container_open]: isMenuOpen,
 				})}>
