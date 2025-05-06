@@ -3,7 +3,7 @@ export const fontFamilyClasses = [
 	'ubuntu',
 	'cormorant-garamond',
 	'days-one',
-	'merreather',
+	'merriweather',
 ] as const;
 
 export type FontFamiliesClasses = (typeof fontFamilyClasses)[number];
