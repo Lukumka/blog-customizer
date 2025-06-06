@@ -1,53 +1,75 @@
-# Проектная работа: Вёрстка проекта
+<a id="readme-top"></a>
 
-## Шаг первый. Изучаем имеющиеся компоненты
+# Blog Customizer
 
-[Макет проекта](https://www.figma.com/file/FEeiiGLOsE7ktXbPpBxYoD/Custom-dropdown?type=design&node-id=0%3A1&mode=design&t=eXRJnWC6Xsuw0qR4-1)
+#
 
-Для запуска Storybook выполните:
+## [Ссылка на проект](https://lukumka.github.io/blog-customizer/)
+
+#
+
+<img  style="width: 100%; border-radius: 2px; display: block" src="https://files.lukumka-dev.ru/blog-customizer.png" alt="Demo" width="300">
+
+#### Blog Customizer это современное фронтенд-приложение, основная задача которого — редактирование, настройка и визуализация элементов блога в интерактивной форме.
+
+## Технологии
+
+- [![TypeScript][TypeScript]][TypeScript-url]
+- [![React][React]][React-url]
+- [![CSSModules][CSSModules]][CSSModules-url]
+- [![SASS][SASS]][SASS-url]
+- [![Webpack][Webpack]][Webpack-url]
+
+<p align="right">(<a href="#readme-top">наверх</a>)</p>
+
+## Установка и запуск
+
+Для установки и запуска проекта необходимо выполнить команды
 
 ```
-npm run storybook
+npm install
+npm run start
 ```
 
-Для запуска линтера для стилей выполните:
+или
 
 ```
-npm run stylelint
+yarn
+yarn start
 ```
 
-Для запуска линтера выполните:
+## Сборка
 
 ```
-npm run lint
+npm run build
 ```
 
-Для запуска форматтера выполните:
+или
 
 ```
-npm run format
+yarn build
 ```
 
-### Функциональные требования
+<!-- Бейджи -->
 
-- При нажатии на «стрелку» открывается сайдбар с настройками, при повторном нажатии или клике вне сайдбар закрывается.
-- При изменении настроек в сайдбаре они не применяются сразу.
-- После нажатия на «применить» стили применяются к статье.
-- При нажатии «сбросить» настройки в форме сбрасываются на начальные, которые были при открытии страницы, и стили применяются к статье.
-- Настройки устанавливаются через CSS-переменные, которые уже есть в стилях и установлены в коде в дефолтные значения.
+[React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[TypeScript]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=FFFFFF&color=3178C6
+[Redux]: https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=FFFFFF&color=764ABC
+[ReactRouter]: https://img.shields.io/badge/ReactRouter-101010?style=for-the-badge&logo=reactrouter&logoColor=CA4245
+[Webpack]: https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=FFFFFF&color=8DD6F9
+[JavaScript]: https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=303030&color=F7DF1E
+[CSS]: https://img.shields.io/badge/CSS-0090d0?style=for-the-badge&logo=css&logoColor=FFF&color=0090d0
+[SASS]: https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=sass&logoColor=FFF&color=CC6699
+[CSSModules]: https://img.shields.io/badge/cssmodules-FFF?style=for-the-badge&logo=cssmodules&logoColor=000&color=FFF
 
-## Шаг второй. Реализация формы
+<!-- Ссылки -->
 
-Продумайте следующие моменты, прежде чем приступать к коду:
-
-- как будет организована композиция,
-- где вы будете хранить состояние,
-- как передавать данные между формой и страницей.
-
-Затем реализуйте механику открытия-закрытия панели с формой, после этого можно будет временно зафиксировать ее пропсом для удобства реализации.
-
-После этого реализуйте форму из имеющихся компонент согласно макету.
-
-## Шаг третий. Обеспечьте передачу данных между формой и страницей
-
-Реализуйте по отдельности сохранение состояния страницы и состояние формы. Обеспечьте применение нового состояния после нажатия на «применить».
+[React-url]: https://reactjs.org/
+[TypeScript-url]: https://www.typescriptlang.org/
+[Redux-url]: https://redux.dev/
+[ReactRouter-url]: https://reactrouter.com/
+[Webpack-url]: https://webpack.js.org/
+[JavaScript-url]: https://262.ecma-international.org/
+[CSS-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[SASS-url]: https://sass-lang.com/
+[CSSModules-url]: https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/

@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path'); //для того чтобы превратить отнсительный путь в абсолютный мы будем использовать пакет path
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -94,6 +95,9 @@ module.exports = {
 		}),
 		new webpack.EnvironmentPlugin({
 			NODE_ENV: 'development', // значение по умолчанию 'development' если переменная process.env.NODE_ENV не передана
+		}),
+		new CopyPlugin({
+			patterns: [{ from: './public/favicon.ico', to: 'favicon.ico' }],
 		}),
 	],
 };
